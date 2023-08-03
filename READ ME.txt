@@ -1,0 +1,57 @@
+GUIDA VELOCE AL CODICE:
+
+
+NOME CARTELLA: thoughts
+NOME DATABASE: bdlw
+encoding del database: utf8mb4_general_ci 		(supporta più codepoints(numero univoco assegnato a ogni carattere unicode) di utf-8, è attualmente raccomandato)
+
+Fast-start: http://localhost/thoughts/index.php
+
+Le password sono salvate già codificate nel db; la password di tutti gli utenti presenti sul blog attualmente è Password1
+
+
+
+Struttura della cartella:
+
+• cartella relazione e db estratto: contiene la relazione del progetto e l’sql del database estratto
+
+• cartella immagini: contiene le immagini utilizzate sul sito
+
+• cartella upload: contiene le immagini che caricheranno gli utenti
+
+• cartella asset si divide in 5 sottocartelle:
+
+	o bootstrap 4.5.3 : libreria bootstrap, non toccare
+
+	o bootstrap-select-1.13.14 : libreria bootstrap per il selectpicker, jquery plugin per bootstrap, non toccare
+
+	o popper: contiene estrazione libreria popper, non toccare
+
+	o css:contiene tutti i file css per le impostazioni di colori di sfondo e font e in più un file “generic.css” che contiene classi 
+		di stile generali per tutto il sito
+
+	o js: contiene il file my_script.js, che contiene tutte le chiamate ajax e jquery del sito
+
+• cartella views: contiene i body di tutte le pagine del sito, ovvero tutto ciò che verrà mostrato al cliente; contiene inoltre i file di header e footer.
+
+• File rimanenti (cito i fondamentali per la funzione del sito):
+
+	o Page.php “costruisce” tutte le pagine del sito tramite chiamate ai file di header, footer e body. Contiene inoltre la dichiarazione di 
+		variabile di connessione e la chiusura della connessione.
+
+	o include.php contiene session_start() e l’inclusione del file di connessione al db “connect.php”
+
+	o connect.php contiene la connessione al database.
+
+	o funzioni.php contiene tutte le funzioni riutilizzate su più pagine (buona parte dei controlli degli input) e 
+		la funzione per controllare e inserire le immagini caricate nella cartella upload.
+
+	o index.php contiene un indirizzamento alla pagina Home.php
+
+	o logout.php permette l’operazione di logout.
+
+I file restanti (esclusi quelli sopracitati) sono file php che conterranno la “costruzione” di tutte 
+le pagine (funzione index che tramite page.php costruisce la pagina) e le funzioni (richiamate tramite evento ajax) necessarie per 
+quella specifica pagina: saranno le pagine principali del sito.
+
+

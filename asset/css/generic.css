@@ -1,0 +1,49 @@
+.overflow_hidden{
+ 	overflow:hidden!important;
+}
+.green_home{
+	background: #C1DBDC;
+}
+.button_link{
+  background-color: green;
+  color: white;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+}
+.blog_link{
+	font-size::50px;
+}
+.generic_font{
+  font-family: 'Trebuchet MS', sans-serif;  
+}
+.generic_bg{
+  background-image: url("../../immagini/sfondo.jpg");
+}
+.made_by{
+  text-align: center;
+  background-color: #e9ecef;
+  color: green;
+}
+/*id per far andare il footer infondo alla pagina*/
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom: 2.5rem;    /* altezza del footer*/
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* altezza footer */
+}
+/*classe per il nickname disponibile*/
+.ok-nick{
+  border: 8px solid #28a745;
+  border-radius: .25rem;
+}
